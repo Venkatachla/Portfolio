@@ -1,0 +1,12 @@
+/*
+ * This file is required to make Tailwind CSS work correctly.
+ * It injects Tailwind's base, components, and utility styles.
+*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Small additions for smooth scroll and animation delay utility */
+html { scroll-behavior: smooth; }
+.animation-delay-2000 { animation-delay: 2s; }
