@@ -61,7 +61,7 @@ const App = () => {
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     // Replace "YOUR_FORMSPREE_FORM_ID" with your actual Formspree form ID
-    const formUrl = "https://formspree.io/f/YOUR_FORMSPREE_FORM_ID";
+    const formUrl = "https://formspree.io/f/mldwvobr";
     
     try {
       const response = await fetch(formUrl, {
@@ -101,9 +101,9 @@ const App = () => {
     return typedText;
   };
 
-  const roles = ["Frontend devlopment", "Fullstack developement", "Software developement","Mobile App developement"];
+  const roles = ["Frontend devlopment", "Fullstack developement", "Software developement","Mobile App devlopment"];
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
-  const typedHomeText = useTypingEffect("Hi, I'm Venkatachala V", 100);
+  const typedHomeText = useTypingEffect("Hi There, I'm Venkatachala V", 100);
 
   const renderRole = (role) => {
     return <span className="text-teal-400 font-bold">{role}</span>;
@@ -273,7 +273,7 @@ const App = () => {
       </style>
       <header className="fixed top-0 left-0 right-0 z-50 bg-slate-900 bg-opacity-80 backdrop-filter backdrop-blur-sm shadow-lg">
         <nav className="container mx-auto px-4 py-3 flex justify-between items-center">
-          <div className="text-xl font-bold text-teal-400">Venkatachala.dev</div>
+          <div className="text-xl font-bold text-teal-400">Venkatachala V</div>
           <div className="md:hidden">
             <button onClick={toggleMenu} className="focus:outline-none">
               <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -341,7 +341,7 @@ const App = () => {
               </p>
               <p className="text-md md:text-lg text-gray-400 leading-relaxed mb-4">
                 I am a third-year Computer Science student at M. S. Ramaiah Institute of Technology. My journey into software development is driven by a passion for problem-solving and a desire to build impactful applications. I specialize in Java, Data Structures & Algorithms, and modern web technologies. My projects showcase my dedication to creating efficient, scalable, and user-friendly solutions. I am a quick learner and a team player, always eager to take on new challenges and contribute to a collaborative environment.</p>
-              <a href="./resume.pdf" download className="bg-teal-500 hover:bg-teal-600 transition duration-300 text-white font-bold py-3 px-6 rounded-full shadow-lg inline-block">Download Resume</a>
+              <a href="https://drive.google.com/file/d/19U8qzoNhKzp_3nRJpgIAtnj_EaiATcBp/view?usp=sharing" download className="bg-teal-500 hover:bg-teal-600 transition duration-300 text-white font-bold py-3 px-6 rounded-full shadow-lg inline-block">Download Resume</a>
             </div>
           </div>
         </section>
@@ -355,7 +355,7 @@ const App = () => {
                 { name: 'HTML', color: 'text-orange-500' },
                 { name: 'CSS', color: 'text-blue-500' },
                 { name: 'JavaScript', color: 'text-yellow-500' },
-                { name: 'React', color: 'text-sky-500' },
+
                 { name: 'Flutter', color: 'text-blue-400' },
                 { name: 'Java', color: 'text-red-500' },
                 { name: 'Python', color: 'text-cyan-500' },
