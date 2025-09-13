@@ -101,7 +101,7 @@ const App = () => {
     return typedText;
   };
 
-  const roles = ["coder", "problem solver", "Fullstack developer", "Software developer"];
+  const roles = ["Frontend devlopment", "Fullstack developement", "Software developement","Mobile App developement"];
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
   const typedHomeText = useTypingEffect("Hi, I'm Venkatachala V", 100);
 
@@ -241,6 +241,34 @@ const App = () => {
             border-color: #63b3ed; /* blue-400 equivalent */
             box-shadow: 0 0 0 2px rgba(99, 179, 237, 0.5); /* blue-400 with opacity */
         }
+        @keyframes pulse-glow {
+            0%, 100% {
+              transform: scale(1);
+              box-shadow: 0 0 10px rgba(59, 130, 246, 0.5), 0 0 20px rgba(59, 130, 246, 0.3);
+            }
+            50% {
+              transform: scale(1.05);
+              box-shadow: 0 0 20px rgba(59, 130, 246, 0.8), 0 0 30px rgba(59, 130, 246, 0.6);
+            }
+          }
+        .animate-pulse-glow {
+            animation: pulse-glow 3s infinite ease-in-out;
+        }
+
+        .hover-lift {
+          transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .hover-lift:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .hover-scale {
+          transition: transform 0.3s ease-in-out;
+        }
+        .hover-scale:hover {
+          transform: scale(1.1);
+        }
         `}
       </style>
       <header className="fixed top-0 left-0 right-0 z-50 bg-slate-900 bg-opacity-80 backdrop-filter backdrop-blur-sm shadow-lg">
@@ -280,7 +308,7 @@ const App = () => {
               <span className="typing-effect">{typedHomeText}</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto md:mx-0">
-              I'm a {renderRole(roles[currentRoleIndex])}
+              I'm Into {renderRole(roles[currentRoleIndex])}
             </p>
             <div className="mt-8 space-y-4 md:space-y-0 md:space-x-4">
               <a href="#about" onClick={() => handleScrollTo('about')} className="bg-teal-500 hover:bg-teal-600 transition duration-300 text-white font-bold py-3 px-6 rounded-full shadow-lg inline-block">About Me</a>
@@ -291,20 +319,20 @@ const App = () => {
               // Replace this URL with the direct link to the image you want to use.
               src="https://personal-portfolio-three-sage.vercel.app/assets/images/hero.png"
               alt="Venkatachala V"
-              className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-teal-500 shadow-xl"
+              className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-teal-500 shadow-xl animate-pulse-glow"
             />
           </div>
         </section>
         <section ref={getSectionRef('about')} id="about" className="min-h-screen flex items-center justify-center p-4">
           <div className="text-center max-w-4xl mx-auto flex flex-col md:flex-row items-center">
-            <div className="md:w-1/2 md:pr-8 mb-6 md:mb-0">
+            <div className="md:w-1/2 md:pr-8 mb-6 md:mb-0 hover-lift">
               <img
                 src={myProfilePic}
                 alt="Venkatachala V"
                 className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-teal-500 shadow-xl mx-auto"
               />
             </div>
-            <div className="md:w-1/2 md:pl-8 text-left">
+            <div className="md:w-1/2 md:pl-8 text-left hover-lift bg-slate-800 p-8 rounded-xl shadow-lg">
               <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
                 About Me
               </h2>
@@ -337,7 +365,7 @@ const App = () => {
                 { name: 'OOP', color: 'text-yellow-300' },
                 { name: 'Problem Solving', color: 'text-green-500' },
               ].map((skill, index) => (
-                <div key={index} className="parallax-tilt-container">
+                <div key={index} className="parallax-tilt-container hover-lift">
                   <div className="parallax-card bg-slate-800 p-8 rounded-xl shadow-lg transition duration-300 hover:shadow-xl hover:bg-slate-700 cursor-pointer">
                     <div className={`text-6xl ${skill.color} mb-4`}>
                       <FontAwesomeIcon icon={skillIcons[skill.name]} />
@@ -375,7 +403,7 @@ const App = () => {
                   live: '#'
                 },
               ].map((project, index) => (
-                <div key={index} className="parallax-tilt-container">
+                <div key={index} className="parallax-tilt-container hover-lift">
                   <div className="parallax-card bg-slate-800 p-8 rounded-xl shadow-lg transition duration-300 hover:shadow-xl hover:bg-slate-700 cursor-pointer">
                     <h3 className="text-2xl font-bold text-white mb-4">{project.title}</h3>
                     <p className="text-gray-400 mb-6">{project.desc}</p>
@@ -396,71 +424,71 @@ const App = () => {
           </div>
         </section>
         <section ref={getSectionRef('education')} id="education" className="min-h-screen flex items-center justify-center p-4">
-  <div className="text-center w-full max-w-6xl mx-auto">
-    <h2 className="text-3xl md:text-5xl font-bold text-white mb-12">
-      My Education
-    </h2>
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-  <div className="text-left bg-slate-800 p-8 rounded-xl shadow-lg">
-    <h3 className="text-2xl font-bold text-teal-400 mb-4">BE in Computer Science</h3>
-    <p className="text-gray-300 font-semibold mb-2">M. S. Ramaiah Institute of Technology</p>
-    <p className="text-400 text-sm">Present: 2023 - 2027</p>
-    <p className="text-400 text-sm">CGPA: 9.77</p>
-    <p className="text-gray-400 leading-relaxed">
-      I am a third-year Computer Science student at M. S. Ramaiah Institute of Technology. My journey into software development is driven by a passion for problem-solving and a desire to build impactful applications. I specialize in Java, Data Structures & Algorithms, and modern web technologies. 
-    </p>
-  </div>
-  <div className="flex justify-center">
-    <img src="https://www.iesonline.co.in/colleges-image/ramaiah-institute-of-technology.jpg" alt="M. S. Ramaiah Institute of Technology" className="rounded-xl shadow-lg w-96 h-100" />
-  </div>
-</div>
-    <div className="mt-12 w-full">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-        <div className="text-left bg-slate-800 p-8 rounded-xl shadow-lg">
-          <h3 className="text-2xl font-bold text-white mb-4">Pre-University (12th Grade)</h3>
-          <p className="text-gray-300 font-semibold">Mandavya Excellence PU College</p>
-          <p className="text-400 text-sm">Completed: 2023</p>
-          <p className="text-gray-400 text-sm">Percentage: 97.33%</p>
-          <p className="text-gray-400 leading-relaxed">
-            I completed my class 12 education from Mandavya Excellence PU college, Mandya, under the Karnataka state board, where I studied Physics, Chemistry, and Mathematics (PCM) with Biology.
-          </p>
-        </div>
-        <div className="flex justify-center">
-          <img src="https://cache.careers360.mobi/media/schools/social-media/media-gallery/25651/2020/8/19/Mandavya%20Excellence%20Pre%20University%20College-Campus-View.jpg" alt="Mandavya Excellence PU College" className="rounded-xl shadow-lg w-80 h-auto" />
-        </div>
-      </div>
-    </div>
-    <div className="mt-12 w-full">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-        <div className="text-left bg-slate-800 p-8 rounded-xl shadow-lg">
-          <h3 className="text-2xl font-bold text-white mb-4">Secondary School (10th Grade)</h3>
-          <p className="text-gray-300 font-semibold">Poorna Prajna Convent</p>
-          <p className="text-400 text-sm">Completed: 2021</p>
-          <p className="text-gray-400 text-sm">Percentage: 97.12%</p>
-          <p className="text-gray-400 leading-relaxed">
-            I completed my class 10 education from Poorna Prajna Convent, Maddur, under the Karnataka stateboard.
-          </p>
-        </div>
-        <div className="flex justify-center">
-          <img src="https://poornaprajna.ac.in/img/bhadravati.jpg" alt="Poorna Prajna Convent" className="rounded-xl shadow-lg w-80 h-auto" />
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+          <div className="text-center w-full max-w-6xl mx-auto">
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-12">
+              My Education
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+              <div className="text-left bg-slate-800 p-8 rounded-xl shadow-lg hover-lift">
+                <h3 className="text-2xl font-bold text-teal-400 mb-4">BE in Computer Science</h3>
+                <p className="text-gray-300 font-semibold mb-2">M. S. Ramaiah Institute of Technology</p>
+                <p className="text-400 text-sm">Present: 2023 - 2027</p>
+                <p className="text-400 text-sm">CGPA: 9.77</p>
+                <p className="text-gray-400 leading-relaxed">
+                  I am a third-year Computer Science student at M. S. Ramaiah Institute of Technology. My journey into software development is driven by a passion for problem-solving and a desire to build impactful applications. I specialize in Java, Data Structures & Algorithms, and modern web technologies. 
+                </p>
+              </div>
+              <div className="flex justify-center hover-lift">
+                <img src="https://www.iesonline.co.in/colleges-image/ramaiah-institute-of-technology.jpg" alt="M. S. Ramaiah Institute of Technology" className="rounded-xl shadow-lg w-96 h-auto" />
+              </div>
+            </div>
+            <div className="mt-12 w-full">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div className="text-left bg-slate-800 p-8 rounded-xl shadow-lg hover-lift">
+                  <h3 className="text-2xl font-bold text-white mb-4">Pre-University (12th Grade)</h3>
+                  <p className="text-gray-300 font-semibold">Mandavya Excellence PU College</p>
+                  <p className="text-400 text-sm">Completed: 2023</p>
+                  <p className="text-gray-400 text-sm">Percentage: 97.33%</p>
+                  <p className="text-gray-400 leading-relaxed">
+                    I completed my class 12 education from Mandavya Excellence PU college, Mandya, under the Karnataka state board, where I studied Physics, Chemistry, and Mathematics (PCM) with Biology.
+                  </p>
+                </div>
+                <div className="flex justify-center hover-lift">
+                  <img src="https://cache.careers360.mobi/media/schools/social-media/media-gallery/25651/2020/8/19/Mandavya%20Excellence%20Pre%20University%20College-Campus-View.jpg" alt="Mandavya Excellence PU College" className="rounded-xl shadow-lg w-80 h-auto" />
+                </div>
+              </div>
+            </div>
+            <div className="mt-12 w-full">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div className="text-left bg-slate-800 p-8 rounded-xl shadow-lg hover-lift">
+                  <h3 className="text-2xl font-bold text-white mb-4">Secondary School (10th Grade)</h3>
+                  <p className="text-gray-300 font-semibold">Poorna Prajna Convent</p>
+                  <p className="text-400 text-sm">Completed: 2021</p>
+                  <p className="text-gray-400 text-sm">Percentage: 97.12%</p>
+                  <p className="text-gray-400 leading-relaxed">
+                    I completed my class 10 education from Poorna Prajna Convent, Maddur, under the Karnataka stateboard.
+                  </p>
+                </div>
+                <div className="flex justify-center hover-lift">
+                  <img src="https://poornaprajna.ac.in/img/bhadravati.jpg" alt="Poorna Prajna Convent" className="rounded-xl shadow-lg w-80 h-auto" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         <section ref={getSectionRef('certificates')} id="certificates" className="min-h-screen flex items-center justify-center p-4">
           <div className="text-center w-full max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-12">
               Certificates
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-slate-800 p-8 rounded-xl shadow-lg text-left flex flex-col items-center">
+              <div className="bg-slate-800 p-8 rounded-xl shadow-lg text-left flex flex-col items-center hover-lift">
                 <h3 className="text-xl font-bold text-teal-400 mb-2">Deloitte Australia Technology Job Simulation on Forage</h3>
                 <p className="text-gray-400 text-sm mb-4">September 2025</p>
                 <p className="text-gray-400 leading-relaxed mb-4">Completed a Job simulation involving development and coding. Wrote a proposal for creating a dashboard.</p>
                 <img src={deloitteCert} alt="Deloitte Certificate" className="w-full h-auto rounded-lg shadow-md mt-auto max-w-xs md:max-w-none" />
               </div>
-              <div className="bg-slate-800 p-8 rounded-xl shadow-lg text-left flex flex-col items-center">
+              <div className="bg-slate-800 p-8 rounded-xl shadow-lg text-left flex flex-col items-center hover-lift">
                 <h3 className="text-xl font-bold text-teal-400 mb-2">Java Bootcamp - LetsUpgrade</h3>
                 <p className="text-gray-400 text-sm mb-4">August 2025</p>
                 <p className="text-gray-400 leading-relaxed mb-4">Completed a 3-day intensive program focusing on Java programming, OOP, DSA, and project-based learning.</p>
@@ -477,7 +505,7 @@ const App = () => {
             <p className="text-gray-400 mb-8">
               I’d love to hear from you—reach out for any opportunities or questions!
             </p>
-            <div className="bg-slate-800 p-8 rounded-xl shadow-lg border border-slate-700 mx-auto max-w-md">
+            <div className="bg-slate-800 p-8 rounded-xl shadow-lg border border-slate-700 mx-auto max-w-md hover-lift">
               <h3 className="text-2xl font-bold text-teal-400 mb-6 flex items-center justify-center space-x-2">
                 Connect With Me 🚀
               </h3>
@@ -571,19 +599,19 @@ const App = () => {
             ))}
           </ul>
           <div className="flex justify-center space-x-6 mb-6">
-            <a href="https://www.linkedin.com/in/venkatachala-v-41532029a/" target="_blank" rel="noopener noreferrer" className="text-2xl text-gray-400 hover:text-white transition duration-300">
+            <a href="https://www.linkedin.com/in/venkatachala-v-41532029a/" target="_blank" rel="noopener noreferrer" className="text-2xl text-gray-400 hover:text-white transition duration-300 hover-scale">
               <FontAwesomeIcon icon={faLinkedin} />
             </a>
-            <a href="https://github.com/Venkatachla" target="_blank" rel="noopener noreferrer" className="text-2xl text-gray-400 hover:text-white transition duration-300">
+            <a href="https://github.com/Venkatachla" target="_blank" rel="noopener noreferrer" className="text-2xl text-gray-400 hover:text-white transition duration-300 hover-scale">
               <FontAwesomeIcon icon={faGithub} />
             </a>
-            <a href="https://twitter.com/Venkatachla" target="_blank" rel="noopener noreferrer" className="text-2xl text-gray-400 hover:text-white transition duration-300">
+            <a href="https://twitter.com/Venkatachla" target="_blank" rel="noopener noreferrer" className="text-2xl text-gray-400 hover:text-white transition duration-300 hover-scale">
               <FontAwesomeIcon icon={faTwitter} />
             </a>
-            <a href="https://www.instagram.com/venkatachala__v?igsh=MWd3ZWRreDV2NDZtMg==" target="_blank" rel="noopener noreferrer" className="text-2xl text-gray-400 hover:text-white transition duration-300">
+            <a href="https://www.instagram.com/venkatachala__v?igsh=MWd3ZWRreDV2NDZtMg==" target="_blank" rel="noopener noreferrer" className="text-2xl text-gray-400 hover:text-white transition duration-300 hover-scale">
               <FontAwesomeIcon icon={faInstagram} />
             </a>
-            <a href="https://youtube.com/@venkatachalavenku?si=KIgvWpH2Kj_1tGWG" target="_blank" rel="noopener noreferrer" className="text-2xl text-gray-400 hover:text-white transition duration-300">
+            <a href="https://youtube.com/@venkatachalavenku?si=KIgvWpH2Kj_1tGWG" target="_blank" rel="noopener noreferrer" className="text-2xl text-gray-400 hover:text-white transition duration-300 hover-scale">
               <FontAwesomeIcon icon={faYoutube} />
             </a>
           </div>
