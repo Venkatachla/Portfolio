@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 // Import certificate images
 import javaBootcampCert from './assets/javabootcamp.png';
 import deloitteCert from './assets/deloitte.png';
+import profileImage from './assets/myimage.jpg';
 
 // Import all necessary Font Awesome icon packages.
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -310,7 +311,7 @@ const App = () => {
           </div>
           <div className="flex-1 mt-10 md:mt-0 flex justify-center md:justify-end">
             <img
-              src="https://personal-portfolio-three-sage.vercel.app/assets/myimage.jpg"
+              src="https://personal-portfolio-three-sage.vercel.app/assets/images/hero.png"
               alt="Venkatachala V"
               className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-teal-500 shadow-xl animate-pulse-glow"
             />
@@ -320,7 +321,7 @@ const App = () => {
           <div className="text-center max-w-4xl mx-auto flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 md:pr-8 mb-6 md:mb-0 hover-lift">
               <img
-                src="https://personal-portfolio-three-sage.vercel.app/assets/images/hero.png"
+                src={profileImage}
                 alt="Venkatachala V"
                 className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-teal-500 shadow-xl mx-auto"
               />
