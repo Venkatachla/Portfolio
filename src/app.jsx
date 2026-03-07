@@ -310,7 +310,7 @@ const App = () => {
           </div>
           <div className="flex-1 mt-10 md:mt-0 flex justify-center md:justify-end">
             <img
-              src="https://personal-portfolio-three-sage.vercel.app/assets/images/hero.png"
+              src="https://personal-portfolio-three-sage.vercel.app/assets/myimage.jpg"
               alt="Venkatachala V"
               className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-teal-500 shadow-xl animate-pulse-glow"
             />
@@ -614,5 +614,6 @@ const App = () => {
     </div>
   );
 };
+
 
 export default App;
