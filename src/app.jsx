@@ -3,7 +3,8 @@ import React, { useState, useEffect, useRef } from 'react';
 // Import certificate images
 import javaBootcampCert from './assets/javabootcamp.png';
 import deloitteCert from './assets/deloitte.png';
-
+import profileImage from './assets/myimage.jpg';
+import softwareengcert from './assets/softwareengineering.png';
 // Import all necessary Font Awesome icon packages.
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -320,7 +321,7 @@ const App = () => {
           <div className="text-center max-w-4xl mx-auto flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 md:pr-8 mb-6 md:mb-0 hover-lift">
               <img
-                src="https://personal-portfolio-three-sage.vercel.app/assets/images/hero.png"
+                src={profileImage}
                 alt="Venkatachala V"
                 className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-teal-500 shadow-xl mx-auto"
               />
@@ -469,27 +470,81 @@ const App = () => {
             </div>
           </div>
         </section>
-        <section ref={getSectionRef('certificates')} id="certificates" className="min-h-screen flex items-center justify-center p-4">
-          <div className="text-center w-full max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-12">
-              Certificates
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-slate-800 p-8 rounded-xl shadow-lg text-left flex flex-col items-center hover-lift">
-                <h3 className="text-xl font-bold text-teal-400 mb-2">Deloitte Australia Technology Job Simulation on Forage</h3>
-                <p className="text-gray-400 text-sm mb-4">September 2025</p>
-                <p className="text-gray-400 leading-relaxed mb-4">Completed a Job simulation involving development and coding. Wrote a proposal for creating a dashboard.</p>
-                <img src={deloitteCert} alt="Deloitte Certificate" className="w-full h-auto rounded-lg shadow-md mt-auto max-w-xs md:max-w-none" />
-              </div>
-              <div className="bg-slate-800 p-8 rounded-xl shadow-lg text-left flex flex-col items-center hover-lift">
-                <h3 className="text-xl font-bold text-teal-400 mb-2">Java Bootcamp - LetsUpgrade</h3>
-                <p className="text-gray-400 text-sm mb-4">August 2025</p>
-                <p className="text-gray-400 leading-relaxed mb-4">Completed a 3-day intensive program focusing on Java programming, OOP, DSA, and project-based learning.</p>
-                <img src={javaBootcampCert} alt="Java Bootcamp Certificate" className="w-full h-auto rounded-lg shadow-md mt-auto max-w-xs md:max-w-none" />
-              </div>
-            </div>
-          </div>
-        </section>
+<section ref={getSectionRef('certificates')} id="certificates" className="min-h-screen flex items-center justify-center p-4">
+  <div className="text-center w-full max-w-6xl mx-auto">
+    <h2 className="text-3xl md:text-5xl font-bold text-white mb-12">
+      Certificates
+    </h2>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      {/* Deloitte Certificate */}
+      <div className="bg-slate-800 p-8 rounded-xl shadow-lg text-left flex flex-col items-center hover-lift">
+        <h3 className="text-xl font-bold text-teal-400 mb-2">
+          Deloitte Australia Technology Job Simulation on Forage
+        </h3>
+
+        <p className="text-gray-400 text-sm mb-4">
+          September 2025
+        </p>
+
+        <p className="text-gray-400 leading-relaxed mb-4">
+          Completed a job simulation involving development and coding. Wrote a proposal for creating a dashboard.
+        </p>
+
+        <img
+          src={deloitteCert}
+          alt="Deloitte Certificate"
+          className="w-full h-auto rounded-lg shadow-md mt-auto max-w-xs md:max-w-none"
+        />
+      </div>
+
+      {/* Java Bootcamp */}
+      <div className="bg-slate-800 p-8 rounded-xl shadow-lg text-left flex flex-col items-center hover-lift">
+        <h3 className="text-xl font-bold text-teal-400 mb-2">
+          Java Bootcamp - LetsUpgrade
+        </h3>
+
+        <p className="text-gray-400 text-sm mb-4">
+          August 2025
+        </p>
+
+        <p className="text-gray-400 leading-relaxed mb-4">
+          Completed a 3-day intensive program focusing on Java programming, OOP, DSA, and project-based learning.
+        </p>
+
+        <img
+          src={javaBootcampCert}
+          alt="Java Bootcamp Certificate"
+          className="w-full h-auto rounded-lg shadow-md mt-auto max-w-xs md:max-w-none"
+        />
+      </div>
+
+      {/* Software Engineering Certificate */}
+      <div className="bg-slate-800 p-8 rounded-xl shadow-lg text-left flex flex-col items-center hover-lift">
+        <h3 className="text-xl font-bold text-teal-400 mb-2">
+          Software Engineering - NPTEL
+        </h3>
+
+        <p className="text-gray-400 text-sm mb-4">
+          Jul - Oct 2025 (12 week course)
+        </p>
+
+        <p className="text-gray-400 leading-relaxed mb-4">
+          Completed a 12-week NPTEL course on Software Engineering.
+          Scored 52/100 (Assignment: 20.75/25, Exam: 31.13/75).
+        </p>
+
+        <img
+          src={softwareengcert}
+          alt="Software Engineering Certificate"
+          className="w-full h-auto rounded-lg shadow-md mt-auto max-w-xs md:max-w-none"
+        />
+      </div>
+
+    </div>
+  </div>
+</section>
         <section ref={getSectionRef('contact')} id="contact" className="min-h-screen flex items-center justify-center p-4 bg-slate-900">
           <div className="text-center max-w-2xl mx-auto w-full">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
@@ -614,5 +669,6 @@ const App = () => {
     </div>
   );
 };
+
 
 export default App;
