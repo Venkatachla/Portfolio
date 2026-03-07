@@ -487,6 +487,21 @@ const App = () => {
                 <p className="text-gray-400 leading-relaxed mb-4">Completed a 3-day intensive program focusing on Java programming, OOP, DSA, and project-based learning.</p>
                 <img src={javaBootcampCert} alt="Java Bootcamp Certificate" className="w-full h-auto rounded-lg shadow-md mt-auto max-w-xs md:max-w-none" />
               </div>
+              <div className="bg-slate-800 p-8 rounded-xl shadow-lg text-left flex flex-col items-center hover-lift">
+                <h3 className="text-xl font-bold text-teal-400 mb-2">Software Engineering - NPTEL</h3>
+                <p className="text-gray-400 text-sm mb-4">Jul - Oct 2025 (12 week course)</p>
+                <p className="text-gray-400 leading-relaxed mb-4">
+                  Completed a 12-week NPTEL course on Software Engineering. Scored 52/100 (Assignment: 20.75/25, Exam: 31.13/75). Certificate No: NPTEL25CS108S152602907. Credits recommended: 3 or 4.
+                </p>
+                <a
+                  href="https://archive.nptel.ac.in/content/noc/NOC25/SEM2/Ecertificates/106/noc25-cs108/Course/NPTEL25CS108S15260290710962489.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-auto inline-block bg-teal-500 hover:bg-teal-400 text-white font-semibold py-2 px-6 rounded-lg transition-colors duration-200"
+                >
+                  View Certificate
+                </a>
+              </div>
             </div>
           </div>
         </section>
