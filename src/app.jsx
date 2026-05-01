@@ -335,7 +335,7 @@ const App = () => {
               </p>
               <p className="text-md md:text-lg text-gray-400 leading-relaxed mb-4">
                 I am a third-year Computer Science student at M. S. Ramaiah Institute of Technology. My journey into software development is driven by a passion for problem-solving and a desire to build impactful applications. I specialize in Java, Data Structures & Algorithms, and modern web technologies. My projects showcase my dedication to creating efficient, scalable, and user-friendly solutions. I am a quick learner and a team player, always eager to take on new challenges and contribute to a collaborative environment.</p>
-              <a href="https://drive.google.com/file/d/1cjmJ7_sFbLD118W2lWbz8Ftw3sp1KRwz/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="bg-teal-500 hover:bg-teal-600 transition duration-300 text-white font-bold py-3 px-6 rounded-full shadow-lg inline-block">Download Resume</a>
+              <a href="https://drive.google.com/file/d/1cwQhx0jJMHC1nQn-1g7QZ_Kilz5MxJ9N/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="bg-teal-500 hover:bg-teal-600 transition duration-300 text-white font-bold py-3 px-6 rounded-full shadow-lg inline-block">Download Resume</a>
             </div>
           </div>
         </section>
