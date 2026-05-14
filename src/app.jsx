@@ -614,7 +614,7 @@ const App = () => {
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3 text-gray-300">
                     <FontAwesomeIcon icon={faEnvelope} className="text-teal-400 text-xl" />
-                    <span>venkatachalavenku@gmail.com</span>
+                    <span>venkatachalavenku029@gmail.com</span>
                   </div>
                   <div className="flex items-center space-x-3 text-gray-300">
                     <FontAwesomeIcon icon={faPhone} className="text-teal-400 text-xl" />
